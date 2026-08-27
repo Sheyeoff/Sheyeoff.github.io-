@@ -1,0 +1,14 @@
+{
+  "clean_urls": false,
+  "headers": [
+    {
+      "source": "maps/**",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/json"
+        }
+      ]
+    }
+  ]
+}
