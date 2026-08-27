@@ -1,0 +1,4 @@
+open sftp://sheye.d957f2ff:2822Wed628Aug-MSR@://minestrator.com -hostkey=*
+lcd "C:\Users\Utilisateur\Documents\GitHub\Sheyeoff.github.io-"
+synchronize local . /plugins/BlueMap/web
+exit
