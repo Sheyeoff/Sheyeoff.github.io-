@@ -1,1 +1,0 @@
-import{f as e,s as t}from"./authenticationHook-BenKvHS_.js";var n=async n=>{let r=`/v1/network/playerbaseOverview`;return e&&(r=`/data/network-playerbaseOverview.json`),t(r,n)},r=async n=>{let r=`/v1/network/pingTable`;return e&&(r=`/data/network-pingTable.json`),t(r,n)};export{n,r as t};

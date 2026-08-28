@@ -1,1 +1,0 @@
-import{h as e,m as t,y as n}from"./authenticationHook-BenKvHS_.js";var r=n(t(),1),i=e(),a=(0,r.createContext)({}),o=({children:e})=>{let[t,n]=(0,r.useState)({}),o={result:t,setResult:n};return(0,i.jsx)(a.Provider,{value:o,children:e})},s=()=>(0,r.useContext)(a);export{s as n,o as t};

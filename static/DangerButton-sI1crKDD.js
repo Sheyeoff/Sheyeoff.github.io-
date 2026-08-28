@@ -1,1 +1,0 @@
-import{h as e,m as t}from"./authenticationHook-BenKvHS_.js";t();var n=e(),r=({id:e,className:t,disabled:r,onClick:i,children:a})=>(0,n.jsx)(`button`,{id:e,className:`btn btn-danger `+t,onClick:i,disabled:r,children:a});export{r as t};

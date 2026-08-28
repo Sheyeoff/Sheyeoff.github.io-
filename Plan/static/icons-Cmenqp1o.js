@@ -1,1 +1,0 @@
-var e=e=>{switch(e){case`REGULAR`:return`far`;case`BRAND`:return`fab`;default:return`fas`}};export{e as t};
