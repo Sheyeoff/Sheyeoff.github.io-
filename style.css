@@ -1,0 +1,163 @@
+:root {
+  --grass-top: #6bbf4a;
+  --grass-top-dark: #4f9a35;
+  --dirt: #8a5a34;
+  --dirt-dark: #6e4527;
+  --stone: #8d8d8d;
+  --stone-dark: #6b6b6b;
+  --sky-top: #6ec6ff;
+  --sky-bottom: #bdeaff;
+  --wood: #a0703a;
+  --wood-dark: #7a5228;
+  --text-dark: #2b1d0e;
+  --diamond: #4de3d1;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Press Start 2P', monospace;
+  background: linear-gradient(to bottom, var(--sky-top) 0%, var(--sky-bottom) 55%, var(--grass-top) 55%, var(--grass-top-dark) 100%);
+  image-rendering: pixelated;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Nuages pixelisés en fond */
+.cloud {
+  position: absolute;
+  background: #ffffff;
+  box-shadow:
+    20px 0 0 #ffffff,
+    40px 0 0 #ffffff,
+    10px -10px 0 #ffffff,
+    30px -10px 0 #ffffff;
+  width: 20px;
+  height: 20px;
+  opacity: 0.9;
+  z-index: 0;
+}
+.cloud1 { top: 8%; left: 10%; }
+.cloud2 { top: 15%; left: 65%; transform: scale(1.4); }
+.cloud3 { top: 5%; left: 40%; transform: scale(0.8); }
+
+.title-block {
+  z-index: 2;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+h1 {
+  font-size: clamp(1.4rem, 5vw, 2.4rem);
+  color: #ffffff;
+  text-shadow:
+    3px 3px 0 #3a2a12,
+    -2px 2px 0 #3a2a12,
+    2px -2px 0 #3a2a12,
+    -2px -2px 0 #3a2a12,
+    6px 6px 0 rgba(0,0,0,0.35);
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.subtitle {
+  margin-top: 14px;
+  font-size: 0.6rem;
+  color: #2b3d1a;
+  background: rgba(255,255,255,0.6);
+  display: inline-block;
+  padding: 6px 12px;
+  border: 3px solid #2b3d1a;
+}
+
+.menu {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 90%;
+  max-width: 340px;
+}
+
+/* Bouton style "bloc" Minecraft */
+.mc-button {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.75rem;
+  color: #e8e8e8;
+  padding: 18px 10px;
+  background: var(--stone);
+  border-top: 4px solid #b5b5b5;
+  border-left: 4px solid #b5b5b5;
+  border-right: 4px solid #4a4a4a;
+  border-bottom: 4px solid #4a4a4a;
+  text-shadow: 2px 2px 0 #3a3a3a;
+  cursor: pointer;
+  transition: transform 0.05s ease, filter 0.1s ease;
+  user-select: none;
+}
+
+.mc-button::before {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  border: 1px dashed rgba(255,255,255,0.15);
+  pointer-events: none;
+}
+
+.mc-button:hover {
+  filter: brightness(1.15);
+}
+
+.mc-button:active {
+  transform: translateY(3px);
+  border-top-width: 2px;
+  border-left-width: 2px;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+}
+
+/* Variante "herbe" pour le bouton JOUER */
+.mc-button.play {
+  background: var(--grass-top-dark);
+  border-top-color: #8fdc6a;
+  border-left-color: #8fdc6a;
+  border-right-color: #2f5a1f;
+  border-bottom-color: #2f5a1f;
+  color: #fefff0;
+}
+
+/* Variante "bois" pour le bouton OPTIONS */
+.mc-button.options {
+  background: var(--wood);
+  border-top-color: #c99a5f;
+  border-left-color: #c99a5f;
+  border-right-color: var(--wood-dark);
+  border-bottom-color: var(--wood-dark);
+}
+
+footer {
+  z-index: 2;
+  margin-top: 50px;
+  font-size: 0.55rem;
+  color: #2b3d1a;
+  text-align: center;
+  opacity: 0.85;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .cloud { animation: drift 60s linear infinite; }
+  @keyframes drift {
+    from { transform: translateX(0); }
+    to { transform: translateX(-40px); }
+  }
+}
