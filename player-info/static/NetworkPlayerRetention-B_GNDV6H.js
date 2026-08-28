@@ -1,1 +1,0 @@
-import{h as e,m as t,n}from"./authenticationHook-BenKvHS_.js";import{t as r}from"./PlayerRetention-CrxW32CR.js";t();var i=e(),a=()=>{let{hasPermission:e}=n(),t=e(`page.network.retention`);return(0,i.jsx)(r,{id:`network-retention`,identifier:null,seeRetention:t})};export{a as default};
